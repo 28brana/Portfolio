@@ -3,14 +3,24 @@
 @tailwind utilities;
 
 html{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color:white;
 }
 .container-center{
   @apply flex items-center justify-center flex-col;
 }
 
 .font-title{
-  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+}
+
+.links{
+  background:#27303f;
+  @apply rounded-sm cursor-pointer flex gap-2 font-medium text-base py-2  items-center px-3;
+}
+
+.links:hover{
+  background:#313c4f;
 }
 
 .nav-item{
@@ -18,7 +28,7 @@ html{
 }
 
 .nav-item:hover{
-  @apply text-main;
+  color:#B7CAD9
 }
 .btn-primary{
   @apply border px-6 py-3  border-main bg-main text-white;

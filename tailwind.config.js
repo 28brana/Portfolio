@@ -19,7 +19,8 @@ module.exports = {
         subtitle: '#646464',
         primary:'#222A36',
         secondary:'#1C232D',
-        main:'#676CDA'
+        main:'#676CDA',
+        text:'#93a7c4'
       },
     },
   },

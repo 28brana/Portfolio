@@ -1,46 +1,136 @@
 import { Code, Database, HardDrives, Nut } from "phosphor-react";
-import { useState } from "react";
-
+import azureImage from "../image/Azure.png";
+import cssImage from "../image/css.png";
+import expressjsImage from "../image/expressJs.png";
+import fireBaseImage from "../image/firebase.png";
+import gitImage from "../image/git.png";
+import gitHubImage from "../image/github.png";
+import htmlImage from "../image/html.png";
+import mongoDbImage from "../image/mongoDb.png";
+import muiImage from "../image/mui.svg";
+import mysqlImage from "../image/mysql.png";
+import nextjsImage from "../image/nextjs.svg";
+import nodejsImage from "../image/nodejs.png";
+import reactjsImage from "../image/reactjs.png";
+import vsCodeImage from "../image/vscode.png";
 const Skills = () => {
-  const [current,setCurrent]=useState(0);
   const items = [
     {
       icon: <Code size={24} />,
       title: "Front End",
+      content: [
+        {
+          title: "HTML",
+          image: htmlImage,
+        },
+        {
+          title: "CSS",
+          image: cssImage,
+        },
+        {
+          title: "React.js",
+          image: reactjsImage,
+        },
+        {
+          title: "Next.js",
+          image: nextjsImage,
+        },
+        {
+          title: "Tailwind Css",
+          image:
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+        },
+        {
+          title: "Material Ui",
+          image: muiImage,
+        },
+        // Add more front-end technologies
+      ],
     },
     {
       icon: <HardDrives size={24} />,
       title: "Back End",
+      content: [
+        {
+          title: "Node.js",
+          image: nodejsImage,
+        },
+        {
+          title: "Express.js",
+          image: expressjsImage,
+        },
+        // Add more back-end technologies
+      ],
     },
     {
       icon: <Database size={24} />,
       title: "Database",
+      content: [
+        {
+          title: "MongoDB",
+          image: mongoDbImage,
+        },
+        {
+          title: "MySQL",
+          image: mysqlImage,
+        },
+      ],
     },
     {
       icon: <Nut size={24} />,
       title: "Tools",
+      content: [
+        {
+          title: "Git",
+          image: gitImage,
+        },
+        {
+          title: "GitHub",
+          image: gitHubImage,
+        },
+        {
+          title: "Firebase",
+          image: fireBaseImage,
+        },
+        {
+          title: "Azure",
+          image: azureImage,
+        },
+        {
+          title: "Vscode",
+          image: vsCodeImage,
+        },
+        // Add more tools
+      ],
     },
   ];
   return (
-    <div className="bg-secondary  h-screen text-white">
-      <div className="container  h-screen">
-        <h1 className="font-title pt-12 text-4xl text-center">Skills</h1>
-        <div className="flex h-3/4 items-center  ">
-          <div className="flex flex-col gap-4 flex-1 ">
-            {items.map((item,index) => (
-              <div
-                key={item.title}
-                onClick={()=>setCurrent(index)}
-                className={`px-6 ${index===current ? 'shadow-xl text-main':''} py-6 bg-primary flex justify-between cursor-pointer `}
-              >
-                <h1>{item.title}</h1>
-                {item.icon}
+    <div className="bg-secondary  min-h-screen text-white">
+      <div className="container mx-auto py-10">
+      <h1 className=" pt-12  text-2xl font-semibold "> My Skill Set.</h1>
+        <p className="pt-3 text-xl text-text">A Snapshot of What I Bring.</p>
+        <div className=" pt-12">
+          {items.map((item) => (
+            <div className="mb-10" key={item.title}>
+              <p className="mb-2">{item.title}</p>
+              <div className="flex flex-wrap  items-center gap-6">
+                {item.content.map((subItem) => (
+                  <div
+                    key={subItem.title}
+                    className="flex bg-primary items-center gap-4 px-4 py-3 rounded-md w-48 h-16"
+                  >
+                    <img
+                      src={subItem.image}
+                      className="w-9"
+                      alt={subItem.title}
+                    />
+                    <p>{subItem.title}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="flex-1 px-40 ">
-            <h2 className="text text-2xl">Front End</h2>
-          </div>
+            </div>
+          ))}
+          <p></p>
         </div>
       </div>
     </div>
