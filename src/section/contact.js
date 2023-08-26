@@ -1,15 +1,13 @@
 const Contact = () => {
-    return (
-      <div className="bg-primary  h-screen text-white">
-        <div className="container  h-screen">
-          <h1 className="font-title pt-12 text-4xl text-center">Contact</h1>
-          <div className="flex ">
-  
-          
-          </div>
-        </div>
-      </div>
-    );
-  };
-  export default Contact;
-  
+  return (
+    <footer className=" bg-primary py-6 text-center">
+      <p>
+        Crafted with <span className="text-red-500">💖</span> and{" "}
+        <span className="font-bold">React</span> by Bharat
+        <br />
+        <span className="text-sm opacity-75">Empowered by Tailwind CSS</span>
+      </p>
+    </footer>
+  );
+};
+export default Contact;

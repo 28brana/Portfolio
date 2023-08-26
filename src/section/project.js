@@ -1,5 +1,5 @@
-import { GithubLogo, Link } from "phosphor-react";
-
+import { ArrowSquareOut } from "phosphor-react";
+import gitHubImage from "../image/github.png";
 const Project = () => {
   const projects = [
     {
@@ -43,9 +43,9 @@ const Project = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="overflow-hidden  flex-1 [min-width:300px] [max-width:340px]  cursor-pointer"
+              className="overflow-hidden rounded-md shadow flex-1 [min-width:300px] [max-width:340px] "
             >
-              <div className="h-72">
+              <div className="h-52">
                 <img
                   src={project.image}
                   className="h-full w-full object-cover"
@@ -55,18 +55,21 @@ const Project = () => {
               <div className=" px-4 py-6">
                 <div className="flex justify-between items-center">
                   <p className="text-lg font-semibold">{project.title}</p>
-                  <div  className="flex gap-2">
-                    
-                    <GithubLogo/>
-                    <Link/>
+                  <div className="flex gap-2 items-center">
+                    <div className="w-6">
+                      <img src={gitHubImage} width={'100%'} height={'100%'} alt="github" />
+                    </div>
+                    <div>
+                      <ArrowSquareOut size={23} />
+                    </div>
                   </div>
                 </div>
-                <p className="text-sm">{project.summary} </p>
-                <div className="flex  gap-1">
-                  <p>HTML </p>
-                  <p>CSS </p>
-                  <p>Javascript </p>
-                </div>
+                <div className="my-2" style={{
+                  borderTop:'1px solid',
+                  borderColor:'#27303f'
+                }}/>
+                <p className="text-sm" >{project.summary} </p>
+                
               </div>
             </div>
           ))}

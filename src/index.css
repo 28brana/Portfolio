@@ -34,12 +34,10 @@ html{
   @apply border px-6 py-3  border-main bg-main text-white;
 }
 
-.glassmore{
-background: rgb(255 255 255 / 3%);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.4px);
--webkit-backdrop-filter: blur(4.4px);
+.shadow{
+
+  box-shadow: 0px 10px 12px 0px rgb(0 0 0 / 13%);
+
 }
 
 /*  bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100; */
