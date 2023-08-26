@@ -1,4 +1,5 @@
 import { Calendar } from "phosphor-react";
+import SideWayAnimation from "../animation/sideWay";
 
 const Work = () => {
   const workExperience = [
@@ -22,33 +23,39 @@ const Work = () => {
         <h1 className=" pt-12  md:text-2xl text-xl font-semibold ">
           Professional Journey.
         </h1>
-        <p className="pt-3 md:text-xl text-lg text-text">Where I've Made an Impact.</p>
-        <div className="mx-auto max-w-4xl">
-          {workExperience.map((item) => (
-            <div key={item.id} className="flex  mt-10">
-              <div className="flex-1 md:flex [display:none]  items-center gap-2">
-                <Calendar />
-                {item.date}
-              </div>
-              <div className="border md:mr-28 mr-16 stepper" />
-              <div className="flex-1">
-                <h1 className="md:text-3xl text-2xl font-medium">{item.title} </h1>
-                <p className="md:text-xl text-lg md:mb-2">
-                  {item.company} | {item.location}
-                </p>
-                <div className="flex-1 md:[display:none] flex items-center gap-2 mb-2">
+        <p className="pt-3 md:text-xl text-lg text-text">
+          Where I've Made an Impact.
+        </p>
+        <SideWayAnimation side="RIGHT">
+          <div className="mx-auto max-w-4xl">
+            {workExperience.map((item) => (
+              <div key={item.id} className="flex  mt-10">
+                <div className="flex-1 md:flex [display:none]  items-center gap-2">
                   <Calendar />
                   {item.date}
                 </div>
-                <ul className="list-disc">
-                  {item.responsibilities.map((summery) => (
-                    <li className="mb-2 md:text-lg text-sm">{summery}</li>
-                  ))}
-                </ul>
+                <div className="border md:mr-28 mr-16 stepper" />
+                <div className="flex-1">
+                  <h1 className="md:text-3xl text-2xl font-medium">
+                    {item.title}{" "}
+                  </h1>
+                  <p className="md:text-xl text-lg md:mb-2">
+                    {item.company} | {item.location}
+                  </p>
+                  <div className="flex-1 md:[display:none] flex items-center gap-2 mb-2">
+                    <Calendar />
+                    {item.date}
+                  </div>
+                  <ul className="list-disc">
+                    {item.responsibilities.map((summery) => (
+                      <li className="mb-2 md:text-lg text-sm">{summery}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </SideWayAnimation>
       </div>
     </div>
   );
