@@ -2,30 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.input-field{
-  border: 1px solid rgba(214, 214, 214, 0.8);
-  border-radius: 5px;
-  padding:11px 22px;
-  width: 100%;
+html{
+  font-family: 'Lato', sans-serif;
+}
+.container-center{
+  @apply flex items-center justify-center flex-col;
 }
 
-.upload-field{
-  background: rgba(30, 71, 255, 0.1);
-  border: 1px dashed #1E47FF;
-  border-radius: 5px;
-  padding:11px 22px;
-  width: 100%;
-}
-.upload-field-error{
-  background: rgba(255, 30, 30, 0.1);
-  border: 1px dashed #ff1e1e;
-  border-radius: 5px;
-  padding:11px 22px;
-  width: 100%;
+.font-title{
+  font-family: 'Abril Fatface', cursive;
 }
 
-.info-btn{
-  @apply bg-info mt-6 text-white rounded w-full py-3;
+.nav-item{
+  @apply cursor-pointer;
 }
 
+.nav-item:hover{
+  @apply text-main;
+}
+.btn-primary{
+  @apply border px-6 py-3  border-main bg-main text-white;
+}
+
+.glassmore{
+background: rgb(255 255 255 / 3%);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.4px);
+-webkit-backdrop-filter: blur(4.4px);
+}
+
+/*  bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100; */
