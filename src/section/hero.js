@@ -26,7 +26,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="bg-primary h-screen  text-white  overflow-hidden" id="Home">
+    <div className="bg-primary md:h-screen py-32  text-white  overflow-hidden" id="Home">
       <UpDownAnimation>
         <div className="container flex justify-between items-center m-auto   h-4/5">
           <div>

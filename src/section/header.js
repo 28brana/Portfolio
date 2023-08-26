@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 bg-primary z-50">
-      <div className="flex flex-row items-center justify-between py-8 container mx-auto   ">
+      <div className="flex flex-row items-center justify-between md:py-8 py-4 container mx-auto   ">
         <div>B🧑‍💻R </div>
         <div className="flex-row items-center gap-x-10 md:flex [display:none] ">
           {links.map((link) => (
