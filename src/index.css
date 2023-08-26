@@ -16,7 +16,7 @@ html{
 
 .links{
   background:#27303f;
-  @apply rounded-sm cursor-pointer flex gap-2 font-medium text-base py-2  items-center px-3;
+  @apply rounded-sm cursor-pointer flex gap-2 font-medium md:text-base text-sm py-2  items-center px-3;
 }
 
 .links:hover{
@@ -28,7 +28,10 @@ html{
 }
 
 .nav-item:hover{
-  color:#B7CAD9
+  color:#B7CAD9;
+}
+.active-link{
+  color:#B7CAD9;
 }
 .btn-primary{
   @apply border px-6 py-3  border-main bg-main text-white;

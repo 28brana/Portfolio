@@ -105,10 +105,10 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="bg-secondary  min-h-screen text-white">
+    <div className="bg-secondary  min-h-screen text-white" id="Skills">
       <div className="container mx-auto py-10">
-      <h1 className=" pt-12  text-2xl font-semibold "> My Skill Set.</h1>
-        <p className="pt-3 text-xl text-text">A Snapshot of What I Bring.</p>
+      <h1 className=" pt-12  md:text-2xl text-xl font-semibold "> My Skill Set.</h1>
+        <p className="pt-3 md:text-xl text-lg text-text">A Snapshot of What I Bring.</p>
         <div className=" pt-12">
           {items.map((item) => (
             <div className="mb-10" key={item.title}>
@@ -117,14 +117,14 @@ const Skills = () => {
                 {item.content.map((subItem) => (
                   <div
                     key={subItem.title}
-                    className="flex bg-primary items-center gap-4 px-4 py-3 rounded-md w-48 h-16"
+                    className="flex bg-primary items-center gap-4 px-4 py-3 rounded-md md:w-48 md:h-16 w-36 h-14"
                   >
                     <img
                       src={subItem.image}
-                      className="w-9"
+                      className="nd:w-9 w-7"
                       alt={subItem.title}
                     />
-                    <p>{subItem.title}</p>
+                    <p className="md:text-base text-sm">{subItem.title}</p>
                   </div>
                 ))}
               </div>

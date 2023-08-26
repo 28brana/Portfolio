@@ -4,36 +4,36 @@ const Hero = () => {
   const links = [
     {
       title: "Github",
-      icon: <GithubLogo size={22}  />,
-      href: "/",
+      icon: <GithubLogo size={22} />,
+      href: "https://github.com/28brana",
     },
     {
       title: "LinkedIn",
       icon: <LinkedinLogo size={22} />,
-      href: "/",
+      href: "https://www.linkedin.com/in/28brana/",
     },
     {
       title: "Email",
-      icon: <Envelope size={22}/>,
-      href: "/",
+      icon: <Envelope size={22} />,
+      href: "mailto:28brana@gmail.com",
     },
     {
       title: "Resume",
       icon: <FileText size={22} />,
-      href: "/",
+      href: "https://drive.google.com/file/d/1NXLaanL_XrHx9WKjcSUOdq6Nz28J7iFs/view?usp=sharing",
     },
   ];
   return (
-    <div className="bg-primary h-screen text-white ">
-      
-
+    <div className="bg-primary h-screen text-white " id="Home">
       <div className="container flex justify-between items-center m-auto  h-4/5 ">
-        <div >
-          <p className="text-3xl mb-2">Hey 👋 there! I'm </p>
-          <h1 className="text-8xl font-semibold mb-2 whitespace-nowrap">
+        <div>
+          <p className="md:text-3xl  sm:text-2xl text-lg mb-2">
+            Hey 👋 there! I'm{" "}
+          </p>
+          <h1 className="md:text-8xl sm:text-6xl text-4xl font-semibold mb-2 whitespace-nowrap">
             Bharat Rana{" "}
           </h1>
-          <p className="text-3xl my-6">
+          <p className="md:text-3xl sm:text-2xl  text-lg  my-6">
             Software Engineer.
             <span className="text-text">
               {" "}
@@ -41,20 +41,18 @@ const Hero = () => {
               innovation
             </span>
           </p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             {links.map((link) => (
-              <div
-                key={link.title}
-                className="links"
-              >
-                {link.icon}
-                <p>{link.title}</p>
-              </div>
+              <a key={link.title} target="_blank" rel="noreferrer" href={link.href}>
+                <div className="links">
+                  {link.icon}
+                  <p>{link.title}</p>
+                </div>
+              </a>
             ))}
           </div>
-          
         </div>
-        <div className="[width:800px] ">
+        <div className="[width:800px] lg:block [display:none] ">
           <img src={HeroImage} className="w-full h-full" alt="hero" />
         </div>
       </div>

@@ -33,10 +33,10 @@ const Project = () => {
   ];
 
   return (
-    <div className="bg-secondary  min-h-screen text-white py-12">
+    <div className="bg-secondary  min-h-screen text-white py-12" id="Projects">
       <div className="container ">
-        <h1 className=" pt-12  text-2xl font-semibold "> Things I've Built.</h1>
-        <p className="pt-3 text-xl text-text">
+        <h1 className=" pt-12  md:text-2xl text-xl font-semibold "> Things I've Built.</h1>
+        <p className="pt-3 md:text-xl text-lg text-text">
           Here's some of my projects that I have worked on.
         </p>
         <div className="flex flex-wrap mt-20 gap-8 items-center justify-center ">
@@ -54,7 +54,7 @@ const Project = () => {
               </div>
               <div className=" px-4 py-6">
                 <div className="flex justify-between items-center">
-                  <p className="text-lg font-semibold">{project.title}</p>
+                  <p className="md:text-lg text-sm font-semibold">{project.title}</p>
                   <div className="flex gap-2 items-center">
                     <div className="w-6">
                       <img src={gitHubImage} width={'100%'} height={'100%'} alt="github" />
@@ -68,7 +68,7 @@ const Project = () => {
                   borderTop:'1px solid',
                   borderColor:'#27303f'
                 }}/>
-                <p className="text-sm" >{project.summary} </p>
+                <p className="md:text-sm text-xs" >{project.summary} </p>
                 
               </div>
             </div>
