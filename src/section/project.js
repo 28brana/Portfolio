@@ -7,9 +7,18 @@ import Project4Image from "../image/projects/Project4.png";
 import Project5Image from "../image/projects/Project5.png";
 import Project6Image from "../image/projects/Project6.png";
 import Project7Image from "../image/projects/Project7.png";
+import Project8Image from "../image/projects/turbo-talk.png";
 import UpDownAnimation from "../animation/upDown";
 const Project = () => {
   const projects = [
+    {
+      title: "Turbo Talk",
+      link: "https://turbo-talk.vercel.app/auth/login",
+      github: "https://github.com/28brana/Turbo-Talk",
+      summary:
+        "Crafted a scalable real-time chat and video call solution with advanced features.",
+      image: Project8Image,
+    },
     {
       title: "FashionX",
       link: "https://fashonx.onrender.com/",

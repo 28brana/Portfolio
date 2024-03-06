@@ -14,6 +14,13 @@ import nextjsImage from "../image/nextjs.svg";
 import nodejsImage from "../image/nodejs.png";
 import reactjsImage from "../image/reactjs.png";
 import vsCodeImage from "../image/vscode.png";
+import sassImage from "../image/sass.png";
+import reduxImage from "../image/redux.png";
+import redisImage from "../image/redis.png";
+import awsImage from "../image/aws.png";
+import dockerImage from "../image/docker.png";
+import socketImage from "../image/socket.svg";
+import webrtcImage from "../image/webrtc.png";
 const Skills = () => {
   const items = [
     {
@@ -45,6 +52,14 @@ const Skills = () => {
           title: "Material Ui",
           image: muiImage,
         },
+        {
+          title: "SASS",
+          image: sassImage,
+        },
+        {
+          title: "Redux",
+          image: reduxImage,
+        },
         // Add more front-end technologies
       ],
     },
@@ -75,6 +90,10 @@ const Skills = () => {
           title: "MySQL",
           image: mysqlImage,
         },
+        {
+          title: "Redis",
+          image: redisImage,
+        },
       ],
     },
     {
@@ -94,8 +113,24 @@ const Skills = () => {
           image: fireBaseImage,
         },
         {
-          title: "Azure",
+          title: "Azure (Blob Storage)",
           image: azureImage,
+        },
+        {
+          title: "AWS (S3, SNS, SQS, Lambda)",
+          image: awsImage,
+        },
+        {
+          title: "Socket",
+          image: socketImage,
+        },
+        {
+          title: "Webrtc",
+          image: webrtcImage,
+        },
+        {
+          title: "Docker",
+          image: dockerImage,
         },
         {
           title: "Vscode",

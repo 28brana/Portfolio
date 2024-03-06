@@ -1,4 +1,4 @@
-import { Envelope, FileText, GithubLogo, LinkedinLogo } from "phosphor-react";
+import { Envelope, FileText, GithubLogo, LinkedinLogo, Code } from "phosphor-react";
 import UpDownAnimation from "../animation/upDown";
 import HeroImage from "../image/hero-img.svg";
 const Hero = () => {
@@ -23,6 +23,11 @@ const Hero = () => {
       title: "Resume",
       icon: <FileText size={22} />,
       href: "https://drive.google.com/file/d/1NXLaanL_XrHx9WKjcSUOdq6Nz28J7iFs/view?usp=sharing",
+    },
+    {
+      title: "Leetcode",
+      icon: <Code size={22} />,
+      href: "https://leetcode.com/28brana/",
     },
   ];
   return (
